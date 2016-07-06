@@ -1,1 +1,18 @@
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea reiciendis eius obcaecati nihil minus sint nobis itaque similique, ex hic recusandae dicta iste nemo aliquam aliquid error, cupiditate, exercitationem perferendis?
+
+<script type="text/javascript">
+  $(function(){
+            var numero =parseInt($("#numero").text()),
+                tiempo= setInterval(function(){
+                numero=numero-1;
+                $("#numero").text(numero);
+                    if(numero==0){
+                        $("#numero").text("TIEMPO TERMINADO");
+                        clearInterval(tiempo);
+                    }
+                },1000);
+  });
+</script>
+
+<h1>CUENTA REGRESIVA</h1>
+<div  style="margin:0px auto;width:1000px;height:50px;text-align:center"><h1 id="numero"><%= @cuentaRegresiva%></h1></div>

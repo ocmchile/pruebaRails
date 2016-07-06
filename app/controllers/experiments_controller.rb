@@ -1,6 +1,7 @@
 class ExperimentsController < ApplicationController
   layout "bootstrap"
   def page1
+  	@cuentaRegresiva = 300
   end
 
   def page2
