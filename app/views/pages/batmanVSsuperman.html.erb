@@ -1,2 +1,11 @@
 <%= link_to image_tag("batman.jpg", width: '49%'), pages_batman_path %>
 <%= link_to image_tag("superman.jpg", width: '49%'), pages_superman_path %>
+
+<h3>Formulario de inscripcion</h3>
+<%= flash[:notice] %>
+<%= form_tag pages_okregistro_path do %>
+	<%= radio_button_tag 'heroe', 'Batman', true %>Batman
+	<%= radio_button_tag 'heroe', 'Superman' %>Superman
+	<%= text_field_tag "email", nil, placeholder: 'Ingrese email' %>
+	<%= submit_tag "Enviar", data: { confirm: "Esta seguro de enviar los datos?" } %>
+<% end %>
