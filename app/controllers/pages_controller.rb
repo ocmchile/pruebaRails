@@ -1,8 +1,12 @@
 class PagesController < ApplicationController
   def batman
+  	values = Voto.group(:heroe).count
+  	@batman = values["Batman"]
   end
 
   def superman
+  	values = Voto.group(:heroe).count
+  	@superman = values["Superman"]
   end
 
   def batmanVSsuperman
